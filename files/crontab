@@ -1,0 +1,5 @@
+#*/1 * * * * root echo "Hello world2" >> /var/log/cron.log 2>&1
+# Don't remove the empty line at the end of this file. It is required to run the cron job
+
+00 4 * * * root /usr/sbin/avreg-unlink "..`date -d'10 day ago' '+\%F'`" >> /var/log/cron.log 2>&1
+
